@@ -6,6 +6,8 @@ async-timeout==4.0.2
 attrs==23.1.0
 backoff==2.2.1
 beautifulsoup4==4.12.1
+boto3==1.28.29
+botocore==1.31.29
 cachetools==5.3.0
 certifi==2023.5.7
 chardet==5.1.0
@@ -17,6 +19,7 @@ cssselect==1.2.0
 diskcache==5.6.1
 Django==4.1.7
 django-crispy-forms==2.0
+django-storages==1.13.2
 dnspython==2.3.0
 docker==6.0.1
 duckduckgo-search==2.8.5
@@ -33,6 +36,7 @@ gTTS==2.3.1
 httplib2==0.22.0
 idna==3.4
 iniconfig==2.0.0
+jmespath==1.0.1
 jsonschema==4.17.3
 loguru==0.6.0
 lxml==4.9.2
@@ -69,6 +73,7 @@ regex==2023.3.23
 requests==2.30.0
 rich==13.3.5
 rsa==4.9
+s3transfer==0.6.2
 scipy==1.10.1
 six==1.16.0
 smmap==5.0.0
@@ -79,7 +84,7 @@ tqdm==4.65.0
 typing_extensions==4.5.0
 tzdata==2022.7
 uritemplate==4.1.1
-urllib3==2.0.2
+urllib3==1.26.16
 wcwidth==0.2.6
 websocket-client==1.5.1
 win32-setctime==1.1.0
