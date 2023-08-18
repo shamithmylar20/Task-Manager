@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,16 +78,20 @@ WSGI_APPLICATION = 'TodoProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+# DATABASES = {
+#     'default': {
                 
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Todos',
-        'USER': 'shamith',
-        'PASSWORD': 'shamith10221',
-        'HOST': 'project-1.cf9dt6lrnclf.eu-north-1.rds.amazonaws.com',
-        'PORT': '5432',
-    }
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Todos',
+#         'USER': 'shamith',
+#         'PASSWORD': 'shamith10221',
+#         'HOST': 'project-1.cf9dt6lrnclf.eu-north-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
+DATABASES = {
+    "default" : dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -140,12 +145,12 @@ EMAIL_HOST_USER = 'shamithmylar321@gmail.com'
 EMAIL_HOST_PASSWORD = 'depllnyrmnxxpjnp'
 
 # AWS Access Keys
-AWS_ACCESS_KEY_ID = 'AKIAVNGAMJSOTDOHWQTE '
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'shamithtodos'
-AWS_S3_SIGNATURE_NAME = 's3v4',
-AWS_S3_REGION_NAME = 'eu-north-1'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL =  None
-AWS_S3_VERITY = True
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIAVNGAMJSOTDOHWQTE '
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'shamithtodos'
+# AWS_S3_SIGNATURE_NAME = 's3v4',
+# AWS_S3_REGION_NAME = 'eu-north-1'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL =  None
+# AWS_S3_VERITY = True
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
